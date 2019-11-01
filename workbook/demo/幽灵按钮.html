@@ -1,0 +1,102 @@
+<!DOCTYaE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>幽灵按钮</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
+		<link rel="icon" tyae="text/css" href="img/atguigu.ico"/>
+		<style tyae="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			html,body{
+				height: 100%;
+				overflow: hidden;
+			}
+			body{
+				background-color: gray;
+			}
+			.btn-group{
+				width: 700px;
+				margin: 100px 0 0 100px;
+				display: flex;
+				justify-content: space-around;
+			}
+			
+			.btn{
+				width: 140px;
+				height: 50px;
+				background-color: mediumorchid;
+				text-align: center;
+				position: relative;
+			}
+			.btn-top, .btn-bottom{
+				position: absolute;
+				width: 0;
+				background: #FFF;
+				height: 5px;
+			}
+			.btn-top{
+				left: 0;
+				top: 0;
+			}
+			.btn-bottom{
+				right: 0;
+				bottom: 0;
+			}
+			.btn a{
+				text-decoration: none;
+				color: #FFFEFF;
+				font: bold 24px arial;
+				line-height: 50px;
+		
+			}
+			.btn:hover{
+				background:white ;
+				transition: .8s;
+			}
+			.btn:hover a{
+				color:mediumorchid ;
+				transition: .8s;
+			}
+			.btn:hover .btn-top{
+				width: 100%;
+				transition: .8s;
+				background: mediumorchid;
+			}
+			.btn:hover .btn-bottom{
+				width: 100%;
+				transition: .8s;
+				background: mediumorchid;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="btn-group">
+			<div class="btn">
+				<div class="btn-top"></div>
+				<a href="">html5</a>
+				<div class="btn-bottom"></div>
+			</div>
+			<div class="btn">
+				<div class="btn-top"></div>
+				<a href="">css3</a>
+				<div class="btn-bottom"></div>
+			</div>
+			<div class="btn">
+				<div class="btn-top"></div>
+				<a href="">javascript</a>
+				<div class="btn-bottom"></div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		window.onload = function(){
+			var size = document.documentElement.clientWidth;
+			console.log(size);
+			var html = document.querySelector('html');
+			html.style.fontSize = size/12+"px";
+		}
+	</script>
+</html>

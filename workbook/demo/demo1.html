@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>IE6 position:fixed bug</title>
+<style>
+* {
+     padding:0;
+      margin:0;
+ }
+.mod-test {
+     text-align:center;
+   padding:50px;
+     font:14px/1.5 arial;
+    height:1800px;
+}
+ .test {
+    background-color:#dfdfdf;
+     padding:5px;
+     border:1px solid #aaa;
+    position:fixed;
+    right:130px;
+     top:120px;
+}
+ </style>
+ <!--[if IE 6]>
+ <style type="text/css">
+     html{overflow:hidden;position:relative}
+     body{height:100%;overflow:auto;position:absolute;}
+ </style>
+ <![endif]-->
+ </head>
+ <body>
+ <div class="mod-test">
+  <h1>
+   <a href="" title="IE6 position:fixed bug" rel="bookmark">IE6 position:fixed bug</a>
+  </h2>
+   <p>position:fixed; vs position:absolute;<br />
+    <div class="test">
+    <img src="dj.jpg"/><br/>我一直在的
+    </div>
+ </div>
+ </body>
+</html> 

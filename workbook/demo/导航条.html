@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.nav{
+				width: 1000px;
+				margin: 20px auto;
+				overflow: hidden;
+			}
+			.nav li{
+				float: left;
+				list-style: none;
+				padding: 0 20px;
+				background: silver;
+				background: gainsboro;
+				text-align: center;
+				width: 12.5%;
+				box-sizing: border-box;
+			}
+			.nav li:not(:last-child){
+				border-right: 1px solid seashell;
+			}
+			.nav a{
+				text-decoration: none;
+				color: white;
+			}
+			.nav li:hover{
+				background: darkturquoise;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 创建导航条的结构 -->
+		<ul class="nav">
+			<li><a href="#">首页</a></li>
+			<li><a href="#">新闻</a></li>
+			<li><a href="#">联系</a></li>
+			<li><a href="#">关于</a></li>
+			<li><a href="#">首页</a></li>
+			<li><a href="#">新闻</a></li>
+			<li><a href="#">联系</a></li>
+			<li><a href="#">关于</a></li>
+		</ul>
+	</body>
+</html>

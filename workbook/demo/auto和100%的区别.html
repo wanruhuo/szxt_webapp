@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				height: 0;
+			}
+			html,body{
+				height: 100%;
+				overflow: hidden;
+			}
+			.out{
+				width: 200px;
+				height: 200px;
+				background: pink;
+				margin: 100px auto;
+			}
+			.inner{
+				background: deepskyblue;
+				width: 50px;
+				height: auto;
+				height: 100%;
+				/*
+				 * height：auto随子元素内容撑开的
+				 * 
+				 * height：100%根据父级元素决定的
+				 * */
+			}
+		</style>
+	</head>
+	<body>
+		<div class="out">
+			<div class="inner"><p style="height: 20px;">我是auto</p></div>
+		</div>
+	</body>
+</html>

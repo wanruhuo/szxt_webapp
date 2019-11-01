@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			
+			html,body{
+				height: 100%;
+				overflow: hidden;
+			}
+			body{
+				text-align: center;
+				margin-top: 100px;
+				background: black;
+				color: rgba(255,255,255,.3);
+			}
+			h1{
+				/*transition: 3s;*/
+				font: bold 60px "微软雅黑";
+				display: inline-block;
+				text-align: center;
+				color: rgba(255,255,255,.3);
+				background: linear-gradient(125deg,rgba(255,255,255,0) 100px,rgba(255,255,255,1) 180px,rgba(255,255,255,0) 260px);
+				-webkit-background-clip: text;
+				background-repeat: no-repeat;
+				
+			}
+			/*h1:hover{
+				background-position: 700px 0;
+			}*/
+		</style>
+	</head>
+	<body>
+		<h1>ccSzxt双子小跳</h1>
+	</body>
+	<script type="text/javascript">
+		var h1 = document.querySelector("h1");
+		var flag=-100;
+		setInterval(function(){
+			if(flag == 500){
+				flag = -100;
+			}
+			flag+=10;
+			h1.style.backgroundPositionX = flag+"px";
+		},40)
+		
+	</script>
+</html>

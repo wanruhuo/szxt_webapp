@@ -1,0 +1,89 @@
+<!DOCTYaE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>幽灵按钮</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
+		<link rel="icon" tyae="text/css" href="img/atguigu.ico"/>
+		<style tyae="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			html,body{
+				height: 100%;
+				/*overflow: hidden;*/
+			}
+			body{
+				background-color: gray;
+			}
+			.book{
+				margin: 100px 100px;
+				width: 200px;
+				height: 300px;
+				position: relative;
+			}
+			.page1,.page2,.page3,.page4{
+				position: absolute;
+				right: 0;
+				left: 0;
+				top: 0;
+				bottom: 0;
+			}
+			.page1{
+				z-index: 4;
+			}
+			.page2{
+				z-index: 3;
+			}
+			.page3{
+				z-index: 2;
+			}
+			.page4{
+				z-index: 1;
+			}
+			.page-font{
+				background: greenyellow;
+				font: bold  40px/300px arial;
+				text-align: center;
+				width: 200px;
+				height: 300px;
+				border:solid  10px #fff;
+				backface-visibility: hidden;
+			}
+			.page-back{
+				background: seashell;
+				border:solid  10px #fff; 
+				transform: rotateX(180deg);
+				width: 200px;
+				height: 300px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="book">
+			<div class="page1">
+				<div class="page-back " ></div>
+				<div class="page-font">html5</div>
+			</div>
+			<div class="page2">
+				<div class="page-back"></div>
+				<div class="page-font">css3</div>
+			</div>
+			<div class="page3">
+				<div class="page-back"></div>
+				<div class="page-font">javascript</div>
+			</div>
+			<div class="page4">
+				<div class="page-back"></div>
+				<div class="page-font">end</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		window.onload = function(){
+			
+		}
+	</script>
+</html>

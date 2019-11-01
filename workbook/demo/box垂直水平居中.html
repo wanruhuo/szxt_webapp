@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			html,body{
+				overflow: hidden;
+				height: 100%;
+			}
+			div{
+				width: 200px;
+				height: 200px;
+				background: yellowgreen;
+				/*
+				方法一：已知盒模型大小(width、height)的情况下
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				margin: auto;*/
+				
+				/*
+				方法二：已知盒模型大小(width、height)的情况下
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				margin-left: -100px;
+				margin-top: -100px;*/
+				
+				/*
+				方法二：未知盒模型大小(width、height)的情况下
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%,-50%,0);*/
+			}
+		</style>
+	</head>
+	<body>
+		<div>44555</div>
+	</body>
+</html>
