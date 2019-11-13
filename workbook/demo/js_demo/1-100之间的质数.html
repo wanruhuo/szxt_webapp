@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			 *测试程序性能
+			*/
+			console.time("test");
+			for(var i=2;i<100;i++){
+				var flag=true; 	
+//				for(var j=2;j<parseInt(i/2);j++){
+				for(var j=2;j<Math.sqrt(i);j++){
+					if(i%j==0){
+						flag=false;
+						break;
+					}
+				}
+				if(flag){
+//					console.log(i+"是质数");
+				}
+				
+			}
+			//计时器结束
+			console.timeEnd("test");
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

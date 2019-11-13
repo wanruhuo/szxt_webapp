@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			html,body{
+				height: 100%;
+				overflow: hidden;
+			}
+			.wrap{
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				margin-left: -100px;
+				margin-top: -100px;
+				width: 200px;
+				height: 200px;
+				border: 1px solid;
+				perspective:200px;
+				background: yellowgreen;
+			}
+			.box{
+				position: absolute;
+				left: 0;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+				width: 50px;
+				height: 50px;
+				transition:3s;
+				transform-style: preserve-3d;
+				transform-origin: center center -25px;
+				
+			}
+			.box>div{
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				background: pink;
+				opacity: .7;
+				text-align: center;
+				font: 16px/50px "微软雅黑";
+				backface-visibility: hidden;
+			}
+			.box>div:nth-child(1){
+				z-index: 1;
+			}
+			.box>div:nth-child(2){
+				transform: translateZ(-50px) rotateX(180deg);
+			}
+			.box>div:nth-child(3){
+				left: -50px;
+				transform-origin: right;
+				transform: rotateY(-90deg);
+			}
+			.box>div:nth-child(4){
+				right: -50px;
+				transform-origin: left;
+				transform: rotateY(90deg);
+			}
+			.box>div:nth-child(5){
+				top: -50px;
+				transform-origin: bottom;
+				transform: rotateX(90deg);
+			}
+			.box>div:nth-child(6){
+				bottom: -50px;
+				transform-origin: top;
+				transform:rotateX(-90deg);
+			}
+			.wrap:hover .box{
+				transform: rotate3d(1,1,1,720deg);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="box">
+				<div>前</div>
+				<div>后</div>
+				<div>左</div>
+				<div>右</div>
+				<div>上</div>
+				<div>下</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			html,body{
+				height: 100%;
+				overflow: hidden;
+			}
+			.nav>.row>.item>a{
+				text-decoration: none;
+				color: gray;
+				display: block;
+			}
+			.nav>.row>.item>a:before{
+				content: "";
+				display: block;
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				margin: 0 auto;
+			}
+			.nav>.row{
+				display:flex;
+				margin-top: 10px;
+				width: 300px;
+
+			}
+			.nav>.row>.item{
+				flex-grow: 1;
+				flex-shrink: 0;
+				flex-basis: 0;
+				text-align: center;
+			}
+			.nav>.row:nth-child(1)>.item:nth-child(1)>a:before{
+				background: red;
+			}
+			.nav>.row:nth-child(1)>.item:nth-child(2)>a:before{
+				background: indianred;
+			}
+			.nav>.row:nth-child(1)>.item:nth-child(3)>a:before{
+				background: yellowgreen;
+			}
+			.nav>.row:nth-child(1)>.item:nth-child(4)>a:before{
+				background: pink;
+			}
+			.nav>.row:nth-child(1)>.item:nth-child(5)>a:before{
+				background: salmon;
+			}
+			.nav>.row:nth-child(2)>.item:nth-child(1)>a:before{
+				background: greenyellow;
+			}
+			.nav>.row:nth-child(2)>.item:nth-child(2)>a:before{
+				background: orange;
+			}
+			.nav>.row:nth-child(2)>.item:nth-child(3)>a:before{
+				background: orchid;
+			}
+			.nav>.row:nth-child(2)>.item:nth-child(4)>a:before{
+				background: teal;
+			}
+			.nav>.row:nth-child(2)>.item:nth-child(5)>a:before{
+				background: thistle;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="nav">
+			<div class="row">
+				<div class="item"><a href="">转账 </a></div>
+				<div class="item"><a href="">还款</a></div>
+				<div class="item"><a href="">充值中心</a></div>
+				<div class="item"><a href="">饿了么</a></div>
+				<div class="item"><a href="">城市服务</a></div>
+			</div>
+			<div class="row">
+				<div class="item"><a href="">蚂蚁森林</a></div>
+				<div class="item"><a href="">体育服务</a></div>
+				<div class="item"><a href="">医保</a></div>
+				<div class="item"><a href="">交通服务</a></div>
+				<div class="item"><a href="">花呗</a></div>
+			</div>
+		</div>
+	</body>
+</html>

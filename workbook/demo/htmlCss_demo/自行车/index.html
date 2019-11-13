@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				height: 0;
+			}
+			html,body{
+				height: 100%;
+				overflow: hidden;
+			}
+			.box{
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+				width: 130px;
+				height: 130px;
+				background: url(img/bike.png) no-repeat;
+				background-position: 0 0;
+				animation: move 1s steps(32) infinite;
+				
+			}
+			@keyframes move{
+					from{
+						background-position:0 0;
+					}
+					to{
+						background-position: 0 -4160px;
+					}
+				}
+		</style>
+	</head>
+	<body>
+		<div class="box"></div>
+	</body>
+</html>

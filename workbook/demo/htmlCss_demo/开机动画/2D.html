@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			html,body{
+				overflow: hidden;
+				height: 100%;
+			}
+			.wrap{
+				height: 100%;
+				font: 20px "微软雅黑";
+				text-align: center;
+			}
+			.wrap > .inner{
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate3d(-50%,-50%,0);
+				white-space: nowrap;
+			}
+			.wrap > .inner span{
+				position: relative;
+				animation: move 1s linear infinite alternate;
+			}
+			@keyframes move{
+				from{
+					top: 0;
+				}
+				to{
+					top: -10px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="inner">
+				<span>几</span>
+				<span>白</span>
+				<span>斤</span>
+				<span>的</span>
+				<span>人</span>
+				<span>了</span>
+				<span>还</span>
+				<span>装</span>
+				<span>可</span>
+				<span>爱</span>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		window.onload=function(){
+			var spanN = document.querySelectorAll(".wrap > .inner span");
+			var colors=["red","orange","yellow","green","blue","pink","deeppink","red","orange","yellow","green","blue","pink","deeppink","#1883BA"];
+			for(var i=0;i<spanN.length;i++){
+				spanN[i].style.animation = "move .2s linear "+i*50+"ms infinite alternate";
+				spanN[i].style.color = colors[i];
+			}
+		}
+	</script>
+</html>
