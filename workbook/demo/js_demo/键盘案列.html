@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 100px;
+				height: 100px;
+				background-color: yellowgreen;
+				position: absolute;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var box=document.querySelector(".box");
+				var index=0;
+				document.onkeydown=function(event){
+					index += 10;
+					switch(event.keyCode){
+						case 37:
+							box.style.left=-index+"px";
+							break;
+						case 38:
+							box.style.top=-index+"px";
+							break;
+						case 39:
+							box.style.left=index+"px";
+							break;
+						case 40:
+							box.style.top=index+"px";
+							break;
+					}
+					
+//					if(event.keyCode==39){
+//						index += 10;
+//						box.style.left=index+"px";
+//					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="box"></div>
+	</body>
+</html>

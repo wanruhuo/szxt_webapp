@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 100px;
+				height: 100px;
+				background-color: red;
+				border-radius: 50%;
+				position: absolute;
+			}
+			.box1{
+				width: 100px;
+				height: 100px;
+				background-color: yellow;
+
+				position: absolute;
+				left: 100px;
+				top: 200px;
+			}
+		</style>
+		<script type="text/javascript" src="js/tools.js"></script>
+		<script type="text/javascript">
+			window.onload=function(){
+				var box = document.getElementsByClassName("box")[0];
+				var box1 = document.getElementsByClassName("box1")[0];
+				drag(box1);
+				drag(box);
+			}
+		</script>
+	</head>
+	<body>dasfkl
+		<div class="box"></div>
+		<div class="box1"></div>
+	</body>
+</html>

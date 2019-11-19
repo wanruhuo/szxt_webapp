@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}			
+			#box{
+				width: 100px;
+				height: 100px;
+				background-color: red;
+			}
+		</style>
+		<script type="text/javascript" src="js/tools.js"></script>
+		<script type="text/javascript">
+			window.onload=function(){
+				var box=document.getElementById("box");
+//				box.addEventListener("click",function(){
+//					alert(this);
+//				},false);
+//				box.attachEvent("onclick",function(){
+//					alert(this);
+//				});
+				bind(box,"click",function(){alert(1)})
+				//因为addeventlistener和attachevent中的this不一样，故使用call来指定this对象
+//				function bind(obj,eventStr,callback){
+//					if(obj.addEventListener){
+//						obj.addEventListener(eventStr,callback,false);
+//					}else{
+//						obj.attachEvent("on"+eventStr,function(){
+//							callback.call(obj);
+//						})
+//					}
+//				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="box"></div>
+	</body>
+</html>

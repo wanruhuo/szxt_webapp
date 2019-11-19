@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			/*html,body{
+				height: 100%;
+				overflow: hidden;
+			}*/
+			.box1{
+				width: 100px;
+				height: 100px;
+				background-color: red;
+				position: absolute;
+			}
+			#box2{
+				width: 500px;
+				height: 500px;
+				background-color: greenyellow;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var box1=document.getElementsByClassName("box1")[0];
+				var box2=document.getElementById("box2");
+				document.onmousemove=function(event){
+					event=event || window.event;
+					var x = event.clientX;
+					var y = event.clientY;
+					var st = document.documentElement.scrollTop || document.body.scrollTop;
+					var sl = document.documentElement.scrollLeft || document.body.scrollLeft
+					;
+
+					box1.style.left = x+"px";
+					box1.style.top = y+st+"px";
+				}
+//				box2.onmousemove=function(event){
+//					event = event || window.event;
+//					event.cancelBubble=true;
+//				}
+			}
+		</script>
+	</head>
+	<body style="height: 2000px;">
+		<div class="box1"></div>
+		<div id="box2"></div>
+	</body>
+</html>
